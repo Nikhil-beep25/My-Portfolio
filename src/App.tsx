@@ -20,7 +20,7 @@ function route(){
   return pages.find(p=>p.toLowerCase()===hash) || (hash==='gallery'?'Projects':'Home');
 }
 export function App(){
-  const [page,setPage]=useState(route),[ready,enter]=useState(false),[menu,setMenu]=useState(false),[settings,setSettings]=useState(false);
+  const [page,setPage]=useState(route),[ready,enter]=useState(()=>new URLSearchParams(location.search).has('skipBoot')),[menu,setMenu]=useState(false),[settings,setSettings]=useState(false);
   const [mode,setMode]=useState<typeof modes[number]>(location.hash==='#skills'?'Globe':'Particles');
   const [tier,setTier]=useState<Tier>('HIGH'),[audio,setAudio]=useState(true),[track,setTrack]=useState('Default'),[color,setColor]=useState(0);
   const [reduced,setReduced]=useState(()=>matchMedia('(prefers-reduced-motion: reduce)').matches);
@@ -92,6 +92,8 @@ export function App(){
     <div className="pointer-guides" hidden aria-hidden="true" />
     <a className="wordmark" href="#home">Nikhil</a>
     {page!=='Home'&&<><header className="page-title"><small><a href="#home">Home</a>　/　{page}</small><h1>{page}</h1></header><aside className="corner-contact">Wanna Say Hello?<a href={'mailto:'+profile.email}>{profile.email}</a>Local Time<strong>Noida {now.toLocaleTimeString('en-GB',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit'})}</strong></aside></>}
+    {menu&&<div className="menu-backdrop" onClick={()=>setMenu(false)} aria-hidden="true"/>}
+    {settings&&<div className="menu-backdrop" onClick={()=>setSettings(false)} aria-hidden="true"/>}
     <div className="dock" ref={shell}><button className="wave" onClick={()=>setAudio(!audio)} aria-label={audio?'Mute audio':'Enable audio'} aria-pressed={audio}><svg width="38" height="25" viewBox="0 0 40 25" aria-hidden="true"><path ref={wavePath} d={audio?"M0 12h8l4-5 5 14 5-18 5 13 5-4h8":"M0 12h40"} fill="none" stroke="currentColor" strokeWidth="1.5"/></svg></button>
       <div className="nav-box"><button className="nav-trigger" aria-expanded={menu} aria-label={menu?'Close navigation menu':'Open navigation menu'} onClick={()=>{setMenu(!menu);setSettings(false)}}><small>[{pages.indexOf(page)+1}]</small>{page}<i><em/></i></button>
       <div className={'menu-reveal'+(menu?' is-open':'')} aria-hidden={!menu} ref={node=>{if(node)node.inert=!menu}}><div className="menu-clip"><nav className="nav-panel" data-lenis-prevent><h2>Menu</h2><small>Navigation</small><div className="menu-links">{[...pages].reverse().filter(p=>p!=='Home').map(p=><a key={p} href={'#'+p.toLowerCase()} onClick={()=>setMenu(false)} aria-current={page===p?'page':undefined}><small>[{pages.indexOf(p)+1}]</small><DecodeLabel text={p} reduced={reduced}/><b>●</b></a>)}</div><small>Designs <b>04</b></small><div className="modes">{modes.map((m,i)=><button key={m} aria-pressed={m===mode&&page==='Home'} onClick={()=>goHome(m)}><small>0{i+1}</small> <DecodeLabel text={`Home ${m}`} reduced={reduced}/></button>)}</div><div style={{borderTop:'1px solid var(--rule)',marginTop:'14px',paddingTop:'12px'}}><button className="resume-btn" style={{width:'100%',justifyContent:'space-between'}} onClick={()=>{setMenu(false);setResumeOpen(true)}}><span>Curriculum Vitae</span><b>PDF ↗</b></button></div><div className="socials">{socials.map((s,i)=>{const Icon=icons[i];return <a key={s.label} aria-label={s.label} href={s.url} target="_blank" rel="noreferrer"><Icon size={17}/></a>})}</div></nav></div></div></div>

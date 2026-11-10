@@ -55,7 +55,7 @@ export const PERSONAL_INFO = {
     linkedin: "https://linkedin.com/in/nikhil-bhadauriya-308414321",
   },
   resumePdfUrl: "/assets/Nikhil_Bhadauriya_Resume.pdf",
-  bio: "Full Stack Developer with hands-on experience building robust web applications using Python, JavaScript, TypeScript, React.js, Next.js, Node.js, Express.js, and REST APIs. Experienced in full-stack architecture, API integration, database-driven applications, and responsive UI development across e-commerce, automotive telemetry, and institutional management systems. Proficient in agile methodologies, version control with Git, and deploying production-ready applications.",
+  bio: "Full Stack Developer with hands-on experience building robust web applications using Python, JavaScript, TypeScript, React.js, Next.js, Node.js, Express.js, and REST APIs. Experienced in full-stack architecture, API integration, database-driven applications, and responsive UI development across civic technology, automotive telemetry, and institutional management systems. Proficient in agile methodologies, version control with Git, and deploying production-ready applications.",
 };
 
 export const EDUCATION_LIST: Education[] = [
@@ -89,45 +89,47 @@ export const CERTIFICATIONS_LIST: Certification[] = [
 export const PROJECTS: Project[] = [
   {
     id: "carverse",
-    title: "CarVerse – Car Management System",
-    tagline: "Automotive Management Platform & Telemetry System",
+    title: "CarVerse – Car Rental Platform",
+    tagline: "Drive Your Journey With Confidence",
     category: "Full Stack / MERN Architecture",
     year: "2025 - 2026",
-    description: "Developed a comprehensive car management system using the MERN stack (MongoDB, Express.js, React.js, Node.js), implementing full CRUD operations, advanced search/filter, admin dashboard with real-time inventory tracking, image upload, paginated views, and role-based access control for desktop and mobile.",
+    description: "Developed a comprehensive car rental and fleet management platform using the MERN stack (MongoDB, Express.js, React.js, Node.js), featuring vehicle catalog filtering, online booking engine, dynamic customer reservations, Razorpay payment workflows, admin fleet dashboard, and JWT authentication.",
     impact: "Streamlined automotive inventory management and inspection workflows with sub-second response times and real-time state synchronization.",
-    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "REST APIs"],
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Razorpay", "JWT", "REST APIs"],
     metrics: [
       { label: "Architecture", value: "MERN Stack" },
       { label: "Access Control", value: "Role-Based" },
       { label: "CRUD Operations", value: "Real-Time" }
     ],
     featured: true,
-    github: "https://github.com/Nikhil-beep25"
+    link: "https://carverse-india.vercel.app",
+    github: "https://github.com/Nikhil-beep25/CarVerse"
   },
   {
-    id: "ecommerce-ai",
-    title: "AI-Powered E-commerce Website",
-    tagline: "Full-Stack E-commerce with Generative AI Integrations",
-    category: "Python Full Stack & AI Services",
+    id: "nagriksetu",
+    title: "NagrikSetu – Civic Grievance System",
+    tagline: "Smart Citizen Grievance & Triage System",
+    category: "Security & Civic Technology",
     year: "2025 - 2026",
-    description: "Built a full-stack e-commerce application with AI-powered functionality, featuring product catalogue management, responsive UI, RESTful API integration, dynamic search, secure checkout, AI-driven recommendations, user authentication, order tracking, and an admin dashboard for inventory and analytics.",
-    impact: "Integrated generative recommendations and intelligent query parsing that boosted product discovery and automated inventory analytics.",
-    technologies: ["Python", "Flask", "React.js", "PostgreSQL", "Generative AI", "REST APIs"],
+    description: "Built a civic assistance and smart citizen grievance redressal platform. Features automated petition triage, public RTI tracking, cryptographic verification, modular TypeScript architecture, and a high-accessibility citizen interface for transparent public governance.",
+    impact: "Eliminated paper-intensive signing workflows while establishing verifiable non-repudiation audit trails for sensitive citizen requests.",
+    technologies: ["TypeScript", "Next.js", "Node.js", "WebCrypto API", "PostgreSQL", "Tailwind CSS"],
     metrics: [
-      { label: "Search & Recs", value: "AI-Powered" },
-      { label: "Checkout Pipeline", value: "Secure & Encrypted" },
-      { label: "Dashboard", value: "Analytics & Orders" }
+      { label: "Verification", value: "Instant" },
+      { label: "Audit Integrity", value: "SHA-256" },
+      { label: "Compliance", value: "Enterprise" }
     ],
     featured: true,
-    github: "https://github.com/Nikhil-beep25"
+    link: "https://nagriksetuai.vercel.app",
+    github: "https://github.com/Nikhil-beep25/NagrikSetu"
   },
   {
     id: "vidyasanchar",
-    title: "VidyaSanchar – Student Management System",
-    tagline: "Institutional ERP & Academic Management Fabric",
+    title: "VidyaSanchar – School ERP System",
+    tagline: "Smart Management • Simplified Operations • Better Education",
     category: "Database-Driven Systems / Relational Architecture",
-    year: "2025",
-    description: "Built a student management system using React, Node.js, and PostgreSQL, featuring enrollment, attendance tracking, grade management, role-based access control for administrators and faculty, data export, and interactive analytics dashboards with RESTful API architecture.",
+    year: "2025 - 2026",
+    description: "Built a cloud-based school ERP and student lifecycle management system using React, Node.js, and PostgreSQL. Features student admissions, attendance reconciliation, examination gradebook computation, role-based access control for administrators and faculty, and interactive analytics dashboards.",
     impact: "Unified student academic lifecycles into a synchronized relational database schema with automated grade computation and attendance audits.",
     technologies: ["React.js", "Node.js", "PostgreSQL", "Express.js", "Prisma ORM", "REST APIs"],
     metrics: [
@@ -136,24 +138,8 @@ export const PROJECTS: Project[] = [
       { label: "Analytics", value: "Interactive" }
     ],
     featured: true,
-    github: "https://github.com/Nikhil-beep25"
-  },
-  {
-    id: "mysignsetu",
-    title: "MYSignSetu & NagrikSetu",
-    tagline: "Cryptographic Trust Layer & Civic Infrastructure",
-    category: "Security & Civic Technology",
-    year: "2025",
-    description: "Cryptographic digital document verification and public civic assistance platform. Built with modular TypeScript architecture, asymmetric hash validation, and high-accessibility cross-device UI.",
-    impact: "Eliminated paper-intensive signing workflows while establishing verifiable non-repudiation audit trails for sensitive agreements.",
-    technologies: ["TypeScript", "Next.js", "Node.js", "WebCrypto API", "PostgreSQL", "Tailwind CSS"],
-    metrics: [
-      { label: "Verification", value: "Instant" },
-      { label: "Audit Integrity", value: "SHA-256" },
-      { label: "Compliance", value: "Enterprise" }
-    ],
-    featured: true,
-    github: "https://github.com/Nikhil-beep25"
+    link: "https://vidya-sanchar.vercel.app",
+    github: "https://github.com/Nikhil-beep25/VidyaSanchar"
   }
 ];
 

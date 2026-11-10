@@ -19,7 +19,7 @@ export function About({ onOpenResume }: { onOpenResume?: () => void }) {
           <p className="kicker">Full-stack developer, based in Noida</p>
           <h2>I build the<br/>front of things</h2>
           <p className="prose">
-            I’m Nikhil Bhadauriya. I build civic tools, SaaS products, and web applications with Python and the MERN stack. My work ranges from the citizen workflows in NagrikSetu to the database behind VidyaSanchar.
+            I’m Nikhil Bhadauriya. I build modern web applications, civic platforms, and scalable systems with Python and the MERN stack. My work ranges from the citizen workflows in NagrikSetu to the automotive telemetry of CarVerse and the relational database behind VidyaSanchar.
           </p>
           <div className="hero-resume-action" style={{ margin: '24px 0 0 0' }}>
             <button onClick={onOpenResume} className="resume-pill" aria-label="Open Curriculum Vitae">
@@ -178,10 +178,10 @@ export function Projects({reduced}:{reduced:boolean}) {
   const current=detail===null?null:projects[detail];
   return <article className="project-page"><nav className="project-index" aria-label="Project index"><small>Index</small>{projects.map((p,i)=><button key={p.id} aria-label={'Scroll to '+p.title} aria-current={active===i} onClick={()=>select(i)}>0{i+1}</button>)}</nav>
     <div className="reel-stage" ref={stage} role="region" aria-label="Swipe through projects or use the arrow keys" tabIndex={0}><div className="project-roll">{projects.map((p,i)=><article className="work-row" ref={el=>{rows.current[i]=el}} key={p.id}>
-      {p.id==='mysignsetu'?<div className="sign-mark" aria-hidden="true">M<span>⌁</span></div>:<img src={'/projects/'+p.id+'.jpg'} alt={p.title+' interface'} />}
-      <div><small>0{i+1}　 {p.categories.join(' · ')}</small><h3>{p.title}</h3><p>{p.desc}</p><div className="work-meta"><div className="tags">{p.tech.slice(0,2).map(t=><span key={t}>{t}</span>)}</div><button tabIndex={active===i?0:-1} onClick={()=>setDetail(i)}>View case ↗</button></div></div></article>)}</div></div>
+      <img src={'/projects/'+p.id+'.jpg'} alt={p.title+' interface'} loading="lazy" />
+      <div><small>0{i+1}　 {p.categories.join(' · ')}</small><h3>{p.title}</h3><p>{p.desc}</p><div className="work-meta"><div className="tags">{p.tech.slice(0,2).map(t=><span key={t}>{t}</span>)}</div><div style={{display:'flex',gap:'10px',alignItems:'center'}}>{p.demo&&<a href={p.demo} target="_blank" rel="noreferrer" style={{color:'#00dae3',fontSize:'11px',fontFamily:'var(--mono)',textDecoration:'none',border:'1px solid rgba(0,218,227,0.4)',padding:'3px 9px',borderRadius:'4px',fontWeight:'bold'}}>Live ↗</a>}<button tabIndex={active===i?0:-1} onClick={()=>setDetail(i)}>View case ↗</button></div></div></div></article>)}</div></div>
     <aside className="project-counter"><strong>0{active+1}</strong> /0{projects.length}<hr/>{projects[active].title}</aside>
-    <dialog ref={dialog} className="case-dialog" onClose={()=>setDetail(null)}>{current&&<><button onClick={()=>dialog.current?.close()} aria-label="Close case study">Close ×</button><small>Project case study</small><h2>{current.title}</h2><p>{current.longDesc}</p><ul>{current.features.map(f=><li key={f}>{f}</li>)}</ul><div className="tags">{current.tech.map(t=><span key={t}>{t}</span>)}</div>{current.demo&&<a href={current.demo} target="_blank" rel="noreferrer">Open project ↗</a>}{current.github&&<a href={current.github} target="_blank" rel="noreferrer">GitHub ↗</a>}</>}</dialog>
+    <dialog ref={dialog} className="case-dialog" onClose={()=>setDetail(null)}>{current&&<><button onClick={()=>dialog.current?.close()} aria-label="Close case study">Close ×</button><small>Project case study</small><h2>{current.title}</h2><div style={{margin:'16px 0 20px',borderRadius:'8px',overflow:'hidden',border:'1px solid #333'}}><img src={'/projects/'+current.id+'.jpg'} alt={current.title} style={{width:'100%',height:'auto',display:'block',maxHeight:'280px',objectFit:'cover'}}/></div><p>{current.longDesc}</p><ul>{current.features.map(f=><li key={f}>{f}</li>)}</ul><div className="tags">{current.tech.map(t=><span key={t}>{t}</span>)}</div>{current.demo&&<a href={current.demo} target="_blank" rel="noreferrer">Open project ↗</a>}{current.github&&<a href={current.github} target="_blank" rel="noreferrer">GitHub ↗</a>}</>}</dialog>
   </article>;
 }
 

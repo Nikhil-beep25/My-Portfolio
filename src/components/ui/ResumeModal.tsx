@@ -15,15 +15,15 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
   };
 
   return (
-    <div className="fixed inset-0 z-[120] flex items-center justify-center p-3 sm:p-6 bg-black/90 backdrop-blur-2xl overflow-y-auto animate-fade-in select-text">
+    <div className="fixed inset-0 z-[120] flex items-center justify-center p-2 sm:p-6 bg-black/90 backdrop-blur-2xl overflow-y-auto animate-fade-in select-text">
       {/* Container matching Axevia technical dark aesthetic */}
-      <div className="relative w-full max-w-4xl rounded-2xl bg-carbon-950 border border-white/15 p-6 sm:p-12 shadow-[0_25px_80px_rgba(0,0,0,0.9),0_0_40px_rgba(34,211,238,0.12)] my-auto max-h-[92vh] overflow-y-auto font-sans text-slate-200">
+      <div className="relative w-full max-w-4xl rounded-2xl bg-carbon-950 border border-white/15 p-4 sm:p-8 md:p-12 shadow-[0_25px_80px_rgba(0,0,0,0.9),0_0_40px_rgba(34,211,238,0.12)] my-auto max-h-[92vh] overflow-y-auto font-sans text-slate-200">
         
         {/* Sticky Action Controls Header */}
-        <div className="sticky -top-6 -mt-6 sm:-top-12 sm:-mt-12 pt-6 sm:pt-12 pb-4 mb-6 bg-carbon-950/95 backdrop-blur-md border-b border-white/10 flex flex-wrap items-center justify-between gap-4 z-30">
-          <div className="flex items-center gap-2 font-mono text-xs text-accent-cyan tracking-widest uppercase">
-            <Terminal className="w-3.5 h-3.5" />
-            <span>CURRICULUM VITAE // VERIFIED PROFILE</span>
+        <div className="sticky -top-4 -mt-4 sm:-top-8 sm:-mt-8 md:-top-12 md:-mt-12 pt-4 sm:pt-8 md:pt-12 pb-4 mb-6 bg-carbon-950/95 backdrop-blur-md border-b border-white/10 flex flex-wrap items-center justify-between gap-3 z-30">
+          <div className="flex items-center gap-2 font-mono text-[11px] sm:text-xs text-accent-cyan tracking-widest uppercase">
+            <Terminal className="w-3.5 h-3.5 shrink-0" />
+            <span className="truncate">CURRICULUM VITAE // VERIFIED PROFILE</span>
           </div>
 
           <div className="flex items-center gap-2 sm:gap-3">
@@ -31,7 +31,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
             <a
               href={PERSONAL_INFO.resumePdfUrl}
               download="Nikhil_Bhadauriya_Resume.pdf"
-              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-accent-cyan/40 bg-accent-cyan/10 text-accent-cyan font-mono text-[11px] tracking-wider uppercase hover:bg-accent-cyan/20 hover:border-accent-cyan transition-all cursor-pointer"
+              className="flex items-center gap-1.5 px-3.5 py-2 min-h-[44px] rounded-full border border-accent-cyan/40 bg-accent-cyan/10 text-accent-cyan font-mono text-[11px] tracking-wider uppercase hover:bg-accent-cyan/20 hover:border-accent-cyan transition-all cursor-pointer"
               title="Download Original PDF"
             >
               <Download className="w-3.5 h-3.5" />
@@ -41,7 +41,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
             {/* Print / Save */}
             <button
               onClick={handlePrint}
-              className="hidden sm:flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-white/20 bg-carbon-900 text-slate-300 font-mono text-[11px] tracking-wider uppercase hover:text-white hover:border-white transition-all cursor-pointer"
+              className="hidden sm:flex items-center gap-1.5 px-3.5 py-2 min-h-[44px] rounded-full border border-white/20 bg-carbon-900 text-slate-300 font-mono text-[11px] tracking-wider uppercase hover:text-white hover:border-white transition-all cursor-pointer"
               title="Print Resume"
             >
               <Printer className="w-3.5 h-3.5" />
@@ -51,7 +51,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="p-2 rounded-full border border-white/20 bg-carbon-900 text-slate-400 hover:text-white hover:border-white transition-all cursor-pointer"
+              className="w-11 h-11 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full border border-white/20 bg-carbon-900 text-slate-400 hover:text-white hover:border-white transition-all cursor-pointer"
               title="Close (Esc)"
               aria-label="Close resume modal"
             >
@@ -256,7 +256,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
               <span>06 // CERTIFICATIONS</span>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {CERTIFICATIONS_LIST.map((cert) => (
                 <div key={cert.title} className="p-4 rounded-xl bg-carbon-900/60 border border-white/10 space-y-1">
                   <span className="font-mono text-[10px] text-accent-cyan uppercase tracking-wider block">

@@ -36,7 +36,7 @@ export const AboutExperience: React.FC = () => {
               I am a Senior Full-Stack Architect and Creative Technologist based in India. My engineering work is grounded in two disciplines: building robust, fault-tolerant distributed cloud services, and pushing WebGL / GLSL shaders to deliver tactile digital experiences.
             </p>
             <p className="font-sans text-base text-slate-300 leading-relaxed font-light">
-              Across flagship projects like <strong className="text-white font-semibold">NagrikSetu</strong>, <strong className="text-white font-semibold">MYSignSetu</strong>, <strong className="text-white font-semibold">CarVerse</strong>, and <strong className="text-white font-semibold">VidyaSanchar</strong>, I have focused on solving real-world friction—whether providing millions of citizens access to civic mechanisms, creating tamper-evident cryptographic signature verification, or streaming high-throughput vehicle telemetry in real-time 3D.
+              Across flagship projects like <strong className="text-white font-semibold">CarVerse</strong>, <strong className="text-white font-semibold">NagrikSetu</strong>, and <strong className="text-white font-semibold">VidyaSanchar</strong>, I have focused on solving real-world friction—whether streaming high-throughput vehicle telemetry and rentals in real-time, providing citizens transparent cryptographic access to civic mechanisms, or unifying institutional academic lifecycles into a synchronized relational database.
             </p>
 
             {/* Key Architectural Tenets */}
@@ -64,26 +64,26 @@ export const AboutExperience: React.FC = () => {
           </div>
 
           {/* Right Column: Key Statistics Matrix */}
-          <div className="lg:col-span-5 grid grid-cols-2 gap-4">
-            <div className="p-6 rounded-2xl bg-carbon-950/80 border border-white/10 text-center flex flex-col justify-center space-y-1">
+          <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <div className="p-5 sm:p-6 rounded-2xl bg-carbon-950/80 border border-white/10 text-center flex flex-col justify-center space-y-1">
               <div className="font-display font-extrabold text-4xl sm:text-5xl text-white tracking-tight">5+</div>
               <div className="font-mono text-[11px] text-accent-cyan uppercase tracking-wider">Years Architecture</div>
               <p className="font-sans text-[11px] text-slate-500 mt-1">Full-stack & systems engineering</p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-carbon-950/80 border border-white/10 text-center flex flex-col justify-center space-y-1">
-              <div className="font-display font-extrabold text-4xl sm:text-5xl text-white tracking-tight">4</div>
+            <div className="p-5 sm:p-6 rounded-2xl bg-carbon-950/80 border border-white/10 text-center flex flex-col justify-center space-y-1">
+              <div className="font-display font-extrabold text-4xl sm:text-5xl text-white tracking-tight">3</div>
               <div className="font-mono text-[11px] text-accent-cyan uppercase tracking-wider">Flagship Platforms</div>
-              <p className="font-sans text-[11px] text-slate-500 mt-1">NagrikSetu, MYSignSetu, CarVerse, VidyaSanchar</p>
+              <p className="font-sans text-[11px] text-slate-500 mt-1">CarVerse, NagrikSetu, VidyaSanchar</p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-carbon-950/80 border border-white/10 text-center flex flex-col justify-center space-y-1">
+            <div className="p-5 sm:p-6 rounded-2xl bg-carbon-950/80 border border-white/10 text-center flex flex-col justify-center space-y-1">
               <div className="font-display font-extrabold text-4xl sm:text-5xl text-accent-cyan tracking-tight">99.9%</div>
               <div className="font-mono text-[11px] text-slate-300 uppercase tracking-wider">Service Reliability</div>
               <p className="font-sans text-[11px] text-slate-500 mt-1">Fault-tolerant distributed pipelines</p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-carbon-950/80 border border-white/10 text-center flex flex-col justify-center space-y-1">
+            <div className="p-5 sm:p-6 rounded-2xl bg-carbon-950/80 border border-white/10 text-center flex flex-col justify-center space-y-1">
               <div className="font-display font-extrabold text-4xl sm:text-5xl text-emerald-400 tracking-tight">&lt;180ms</div>
               <div className="font-mono text-[11px] text-slate-300 uppercase tracking-wider">P99 Latency</div>
               <p className="font-sans text-[11px] text-slate-500 mt-1">Optimized query & caching layers</p>
@@ -102,7 +102,7 @@ export const AboutExperience: React.FC = () => {
             {EXPERIENCES.map((exp, idx) => (
               <div
                 key={exp.role + idx}
-                className="p-8 rounded-2xl bg-carbon-950/60 border border-white/10 hover:border-white/20 transition-all space-y-4"
+                className="p-5 sm:p-8 rounded-2xl bg-carbon-950/60 border border-white/10 hover:border-white/20 transition-all space-y-4"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                   <div>
@@ -140,26 +140,26 @@ export const AboutExperience: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="p-5 rounded-xl bg-carbon-950/50 border border-white/10 space-y-2">
+              <span className="font-mono text-xs text-accent-cyan uppercase tracking-wider block">MERN STACK ARCHITECTURE</span>
+              <h5 className="font-display font-bold text-sm text-white">CarVerse Telemetry Pipeline</h5>
+              <p className="font-sans text-xs text-slate-400 leading-relaxed">
+                Engineered full-stack automotive reservation system with dynamic Razorpay payments, real-time fleet inventory tracking, and role-based access control.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-xl bg-carbon-950/50 border border-white/10 space-y-2">
               <span className="font-mono text-xs text-accent-cyan uppercase tracking-wider block">CIVIC TECH INNOVATION</span>
               <h5 className="font-display font-bold text-sm text-white">NagrikSetu Architecture</h5>
               <p className="font-sans text-xs text-slate-400 leading-relaxed">
-                Recognized for architectural transparency and pioneering accessible civic document discovery for diverse regional populations.
+                Pioneered accessible public grievance resolution and RTI application pipelines with cryptographic SHA-256 audit integrity for citizen transparency.
               </p>
             </div>
 
             <div className="p-5 rounded-xl bg-carbon-950/50 border border-white/10 space-y-2">
-              <span className="font-mono text-xs text-accent-cyan uppercase tracking-wider block">CRYPTOGRAPHIC TRUST</span>
-              <h5 className="font-display font-bold text-sm text-white">MYSignSetu Engine</h5>
+              <span className="font-mono text-xs text-accent-cyan uppercase tracking-wider block">RELATIONAL DATA FABRIC</span>
+              <h5 className="font-display font-bold text-sm text-white">VidyaSanchar ERP Engine</h5>
               <p className="font-sans text-xs text-slate-400 leading-relaxed">
-                Engineered zero-knowledge audit trails and client-side asymmetric signing with WebCrypto and hardware security module readiness.
-              </p>
-            </div>
-
-            <div className="p-5 rounded-xl bg-carbon-950/50 border border-white/10 space-y-2">
-              <span className="font-mono text-xs text-accent-cyan uppercase tracking-wider block">WEBGL 60 FPS PERFORMANCE</span>
-              <h5 className="font-display font-bold text-sm text-white">CarVerse Telemetry Pipeline</h5>
-              <p className="font-sans text-xs text-slate-400 leading-relaxed">
-                Maintained 60 FPS 3D configurator benchmarks alongside concurrent 10k/sec WebSocket message ingest.
+                Architected PostgreSQL relational schemas and automated attendance & grading computation engines handling 50,000+ student profiles.
               </p>
             </div>
           </div>

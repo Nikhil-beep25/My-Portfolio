@@ -2,11 +2,11 @@ export const profile = {
   "name": "Nikhil Bhadauriya",
   "title": "Full Stack Developer",
   "phone": "9259329680",
-  "bioShort": "Full Stack Developer with hands-on experience building web applications using Python, JavaScript, TypeScript, React.js, Next.js, Node.js, Express.js, and REST APIs. Experienced in full-stack development, API integration, database-driven applications, and responsive UI development across e-commerce, car management, and student management domains.",
-  "bioLong": "Built applications across e-commerce, car management, and student management domains. Proficient in agile methodologies, version control with Git, and deploying production-ready applications. Strong foundation in software development, data structures, and problem solving.",
+  "bioShort": "Full Stack Developer with hands-on experience building web applications using Python, JavaScript, TypeScript, React.js, Next.js, Node.js, Express.js, and REST APIs. Experienced in full-stack architecture, API integration, database-driven applications, and responsive UI development across civic technology, automotive telemetry, and institutional ERP systems.",
+  "bioLong": "Built production-grade applications across civic infrastructure (NagrikSetu), automotive management (CarVerse), and institutional ERP (VidyaSanchar). Proficient in agile methodologies, version control with Git, and deploying production-ready applications.",
   "email": "nikhilbhadauriya2500@gmail.com",
   "location": "Noida, Uttar Pradesh, India",
-  "currentFocus": "Full-Stack Web & AI Applications",
+  "currentFocus": "Full-Stack Web & Scalable Architectures",
   "resumePdf": "/assets/Nikhil_Bhadauriya_Resume.pdf"
 };
 
@@ -40,11 +40,11 @@ export const resumeExperience = [
   },
   {
     company: "S O Infotech (P) Ltd.",
-    role: "Full Stack Developer Trainee – Python",
+    role: "Full Stack Developer Trainee",
     period: "Dec 2025 – Jul 2026",
     location: "Noida, India",
     highlights: [
-      "Engineered an E-commerce Website using Python Full Stack architecture with Generative AI features, connecting frontend functionality with AI-driven backend services in a cross-functional team environment.",
+      "Engineered web applications and RESTful APIs, connecting modern frontend components with scalable backend microservices in a cross-functional team environment.",
       "Collaborated with senior developers to design RESTful APIs, integrate third-party payment gateways, and optimize database queries, reducing page load times and improving overall application performance."
     ]
   }
@@ -70,52 +70,25 @@ export const resumeCertifications = [
 
 export const projects = [
   {
-    "id": "ecommerce-ai",
-    "title": "AI-Powered E-commerce Website",
-    "tagline": "Full-Stack E-commerce with Generative AI Integrations",
-    "desc": "A full-stack e-commerce application with AI-powered functionality, product catalogue management, responsive UI, RESTful API integration, dynamic search, secure checkout, AI-driven recommendations, user authentication, and admin analytics.",
-    "longDesc": "Engineered using Python full-stack architecture with Generative AI features, connecting responsive frontend UI with AI-driven backend services, third-party payment gateways, dynamic search, and an admin dashboard for inventory and analytics.",
-    "tech": [
-      "Python",
-      "React.js",
-      "Flask",
-      "PostgreSQL",
-      "Generative AI",
-      "REST APIs"
-    ],
-    "categories": [
-      "Full Stack",
-      "AI & E-commerce"
-    ],
-    "demo": "",
-    "github": "https://github.com/Nikhil-beep25",
-    "features": [
-      "Product Catalogue Management",
-      "AI-Driven Recommendations",
-      "Secure Checkout & Auth",
-      "Admin Analytics Dashboard"
-    ]
-  },
-  {
     "id": "carverse",
     "title": "CarVerse",
-    "tagline": "Car Rental Management Platform",
-    "desc": "A full-stack car rental management system built with the MERN stack. Features vehicle fleet management, dynamic customer booking engine, JWT authentication, role-based admin dashboard, Razorpay payment workflow, and MongoDB Atlas database.",
-    "longDesc": "Production-ready vehicle reservation engine featuring catalog filtering by vehicle class, availability date intervals, secure payment verification, and admin telemetry for fleet allocation and revenue analytics.",
+    "tagline": "Drive Your Journey With Confidence",
+    "desc": "A comprehensive car rental and fleet management system built with the MERN stack (MongoDB, Express.js, React.js, Node.js), implementing full CRUD operations, live reservations, Razorpay payment workflows, and real-time telemetry.",
+    "longDesc": "Production-ready vehicle reservation engine featuring catalog filtering by vehicle class, date intervals, secure payment verification, and admin telemetry for fleet allocation and revenue analytics.",
     "tech": [
-      "React",
+      "React.js",
       "Node.js",
-      "Express",
+      "Express.js",
       "MongoDB",
       "Tailwind CSS",
-      "JWT",
-      "Razorpay"
+      "Razorpay",
+      "JWT"
     ],
     "categories": [
       "Full Stack",
-      "Production"
+      "MERN Architecture"
     ],
-    "demo": "https://carverse-india.vercel.app/",
+    "demo": "https://carverse-india.vercel.app",
     "github": "https://github.com/Nikhil-beep25/CarVerse",
     "features": [
       "Fleet & Vehicle Catalog Filtering",
@@ -125,38 +98,58 @@ export const projects = [
     ]
   },
   {
-    "id": "portfolio-world",
-    "title": "Minecraft Developer World",
-    "tagline": "Interactive Portfolio & Game Engine UI",
-    "desc": "An explorable Minecraft-themed developer portfolio featuring procedural Web Audio synthesizer sounds, voxel environmental animations, 3x3 tech crafting table, interactive inventory, advancement achievements, and day/night cycles.",
-    "longDesc": "Engineered with React 19, TypeScript, Tailwind CSS, Framer Motion, and Web Audio API synthesizer. Zero copyright audio, accessible ARIA roles, responsive touch hotbar, and full keyboard navigation support.",
+    "id": "nagriksetu",
+    "title": "NagrikSetu",
+    "tagline": "Smart Citizen Grievance & Triage System",
+    "desc": "A civic technology portal for citizen assistance, digital grievance resolution, and RTI application management with cryptographic audit trails, high-accessibility UI, and transparent status tracking.",
+    "longDesc": "Smart citizen grievance triage and civic assistance platform. Built with modular TypeScript architecture, asymmetric hash validation, and high-accessibility cross-device UI to provide transparent public grievance tracking and citizen empowerment.",
     "tech": [
-      "React 19",
       "TypeScript",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Web Audio API",
-      "Vite"
+      "Next.js",
+      "Node.js",
+      "PostgreSQL",
+      "WebCrypto API",
+      "Tailwind CSS"
     ],
     "categories": [
-      "Frontend",
-      "Interactive"
+      "Civic Tech",
+      "Security"
     ],
-    "demo": "https://nikhilbhadauriya-portfolio.vercel.app",
-    "github": "https://github.com/Nikhil-beep25/Nikhil-Portfolio",
+    "demo": "https://nagriksetuai.vercel.app",
+    "github": "https://github.com/Nikhil-beep25/NagrikSetu",
     "features": [
-      "Interactive 3x3 Recipe Crafting Table",
-      "Procedural Web Audio Sound Engine",
-      "Day / Night Celestial System",
-      "Clickable Block Break & XP Counter"
+      "Public Grievance Resolution Tracker",
+      "RTI Application Pipeline",
+      "Cryptographic SHA-256 Audit Integrity",
+      "Multilingual Citizen Accessibility"
     ]
   },
   {
-    id: "mysignsetu", title: "MYSignSetu", tagline: "Digital signing and verification",
-    desc: "A document-signing workflow with cryptographic verification and an audit trail.",
-    longDesc: "A digital signing project exploring asymmetric verification, document integrity, and tamper-evident records.",
-    tech: ["TypeScript", "Next.js", "WebCrypto API", "PostgreSQL"], categories: ["Document security"],
-    demo: "", github: "", features: ["Signature verification", "Document audit trail"]
+    "id": "vidyasanchar",
+    "title": "VidyaSanchar",
+    "tagline": "Smart Management • Simplified Operations • Better Education",
+    "desc": "An institutional School ERP system built with React, Node.js, and PostgreSQL, featuring student admissions, real-time attendance reconciliation, automated grade computation, and interactive analytics dashboards.",
+    "longDesc": "Unified student academic lifecycles into a synchronized relational database schema with automated grade computation, faculty management, and attendance audits built with React, Node.js, and PostgreSQL with Prisma ORM.",
+    "tech": [
+      "React.js",
+      "Node.js",
+      "PostgreSQL",
+      "Express.js",
+      "Prisma ORM",
+      "REST APIs"
+    ],
+    "categories": [
+      "Full Stack",
+      "Relational DB"
+    ],
+    "demo": "https://vidya-sanchar.vercel.app",
+    "github": "https://github.com/Nikhil-beep25/VidyaSanchar",
+    "features": [
+      "Student Enrollment & Directory",
+      "Real-Time Attendance Reconciliation",
+      "Automated Gradebook Computation",
+      "Interactive Analytics Dashboards"
+    ]
   }
 ];
 

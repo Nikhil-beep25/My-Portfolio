@@ -60,12 +60,13 @@ export const PhotoUploaderModal: React.FC<PhotoUploaderModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-carbon-950/85 backdrop-blur-md">
-      <div className="relative w-full max-w-lg rounded-2xl bg-carbon-900 border border-white/10 p-6 sm:p-8 shadow-2xl">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-carbon-950/85 backdrop-blur-md">
+      <div className="relative w-full max-w-lg rounded-2xl bg-carbon-900 border border-white/10 p-4 sm:p-6 md:p-8 shadow-2xl">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-full bg-carbon-800 text-slate-400 hover:text-white hover:bg-carbon-700 transition-colors"
+          className="absolute top-4 right-4 sm:top-5 sm:right-5 w-11 h-11 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full bg-carbon-800 text-slate-400 hover:text-white hover:bg-carbon-700 transition-colors"
+          aria-label="Close modal"
         >
           <X className="w-4 h-4" />
         </button>
@@ -134,14 +135,14 @@ export const PhotoUploaderModal: React.FC<PhotoUploaderModalProps> = ({
         </div>
 
         {/* Actions */}
-        <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
           <button
             onClick={() => {
               onResetDefault();
               setPreviewSrc(null);
               onClose();
             }}
-            className="flex items-center gap-1.5 font-mono text-xs text-slate-400 hover:text-white transition-colors"
+            className="flex items-center justify-center gap-1.5 min-h-[44px] px-3 py-2 font-mono text-xs text-slate-400 hover:text-white transition-colors cursor-pointer"
           >
             <RefreshCw className="w-3.5 h-3.5" />
             <span>Reset to Cybernetic Silhouette</span>
@@ -150,7 +151,7 @@ export const PhotoUploaderModal: React.FC<PhotoUploaderModalProps> = ({
           <button
             disabled={!previewSrc}
             onClick={handleApply}
-            className={`px-5 py-2.5 rounded-xl font-display font-bold text-xs tracking-wider uppercase transition-all ${
+            className={`min-h-[44px] px-5 py-2.5 rounded-xl font-display font-bold text-xs tracking-wider uppercase transition-all flex items-center justify-center ${
               previewSrc
                 ? 'bg-accent-cyan text-carbon-950 hover:bg-cyan-300 shadow-glow cursor-pointer'
                 : 'bg-carbon-800 text-slate-500 cursor-not-allowed'
