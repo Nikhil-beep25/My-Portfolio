@@ -1262,9 +1262,9 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   Mobile Phones (<640px)
+   Mobile Phones & All Portrait Devices (<900px, or Portrait <=1024px)
    -------------------------------------------------------------------------- */
-@media (max-width: 640px) {
+@media (max-width: 900px), (orientation: portrait) and (max-width: 1024px) {
   .wordmark {
     top: max(14px, var(--safe-top));
     left: max(14px, var(--safe-left));
@@ -1276,7 +1276,7 @@
     gap: 6px;
   }
   .nav-box {
-    width: 140px;
+    width: clamp(140px, 28vw, 190px);
   }
   .nav-box:has(.is-open) {
     width: min(88vw, 320px);
@@ -1286,10 +1286,12 @@
     font-size: 12px;
   }
 
-  /* Hero on mobile: stacked, vertical scrolling */
+  /* Hero on mobile & portrait: stacked, vertical scrolling */
   .studio-hero {
     min-height: 100svh;
+    height: auto;
     padding-top: max(72px, calc(64px + var(--safe-top)));
+    padding-bottom: max(32px, calc(24px + var(--safe-bottom)));
     padding-inline: 16px;
     display: block;
     overflow-y: auto;
@@ -1302,35 +1304,38 @@
     transform: translateX(-50%);
     width: min(88vw, 360px);
     height: min(44svh, 340px);
-    margin: 8px auto 16px;
+    margin: 8px auto 20px;
   }
-  .glass-half { display: none; }
+  .glass-half { display: none !important; }
   .hero-copy {
     position: relative;
     left: auto;
     top: auto;
     width: 100%;
-    margin-top: 10px;
+    max-width: 580px;
+    margin: 0 auto;
+    text-align: left;
   }
   .hero-copy h1 {
-    font-size: clamp(48px, 13vw, 72px);
+    font-size: clamp(48px, 12vw, 76px);
     line-height: .9;
   }
   .hero-tag {
     margin-top: 16px;
-    font-size: 10px;
+    font-size: clamp(10px, 2.5vw, 12px);
     gap: .8em;
   }
   .hero-copy p {
     margin-left: 0;
-    padding-left: 12px;
+    padding-left: 14px;
     max-width: 100%;
-    font-size: 13px;
+    font-size: 14px;
   }
   .hero-resume-action {
     margin-left: 0;
+    margin-top: 20px;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 10px;
   }
   .hero-stats {
     position: relative;
@@ -1338,18 +1343,27 @@
     top: auto;
     transform: none;
     width: 100%;
-    max-width: 100%;
-    margin: 28px 0 16px;
-    padding: 16px;
+    max-width: 580px;
+    margin: 28px auto 20px;
+    padding: 20px;
     background: #090909f0;
     border-radius: 8px;
+    border: 1px solid #282828;
   }
-  .hero-metrics b { font-size: 38px; }
+  .hero-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 16px 0;
+    padding-left: 14px;
+    border-left: 1px solid #555;
+  }
+  .hero-metrics b { font-size: clamp(36px, 9vw, 52px); }
   .hero-ticker {
     position: relative;
     inset: auto;
     width: 100%;
-    margin: 20px 0 16px;
+    margin: 24px 0 16px;
     padding: 0 8px;
   }
   .hero-contact {
@@ -1358,9 +1372,10 @@
     width: 100%;
     justify-content: space-between;
     text-align: left;
-    gap: 12px;
+    gap: 16px;
     flex-wrap: wrap;
-    padding-bottom: 20px;
+    padding-bottom: 24px;
+    margin-top: 12px;
   }
 
   /* Interior Pages */
@@ -1368,7 +1383,7 @@
     padding: clamp(80px, 14svh, 110px) 16px 80px;
     width: 100%;
   }
-  .corner-contact { display: none; }
+  .corner-contact { display: none !important; }
   .page-title {
     position: absolute;
     top: max(14px, var(--safe-top));
@@ -1379,12 +1394,16 @@
 
   .intro-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 28px;
   }
   .intro-grid figure {
     min-height: 280px;
-    max-width: 100%;
+    max-width: 380px;
     aspect-ratio: 4/5;
+    margin: 0 auto;
+  }
+  .intro-grid figure img {
+    object-position: center top;
   }
   .principles {
     grid-template-columns: 1fr;
@@ -1410,7 +1429,7 @@
     grid-template-columns: 1fr;
   }
 
-  /* Reel stage on phone */
+  /* Reel stage on phone/portrait */
   .project-roll {
     width: 100%;
     margin-left: 0;
@@ -1451,9 +1470,9 @@
 }
 
 /* --------------------------------------------------------------------------
-   Tablets (641px – 1024px)
+   Tablets in Landscape Only (901px – 1024px landscape)
    -------------------------------------------------------------------------- */
-@media (min-width: 641px) and (max-width: 1024px) {
+@media (min-width: 901px) and (max-width: 1024px) and (orientation: landscape) {
   .wordmark {
     top: max(18px, var(--safe-top));
     left: max(20px, var(--safe-left));
