@@ -91,7 +91,7 @@ export function App(){
     <audio ref={musicPlayer} src={'/audio/'+(track==='Default'?'default':'digital-minimalism')+'.mp3'} preload="auto" loop />
     <div className="pointer-guides" hidden aria-hidden="true" />
     <a className="wordmark" href="#home">Nikhil</a>
-    {page!=='Home'&&<><header className="page-title"><small><a href="#home">Home</a>　/　{page}</small><h1>{page}</h1></header><aside className="corner-contact">Wanna Say Hello?<a href={'mailto:'+profile.email}>{profile.email}</a>Local Time<strong>Noida {now.toLocaleTimeString('en-GB',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit'})}</strong></aside></>}
+    {page!=='Home'&&<><header className="page-title"><small><a href="#home">Home</a>　/　{page}</small><h1>{page}</h1></header>{page!=='Contact'&&<aside className="corner-contact">Wanna Say Hello?<a href={'mailto:'+profile.email}>{profile.email}</a>Local Time<strong>Noida {now.toLocaleTimeString('en-GB',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit'})}</strong></aside>}</>}
     {menu&&<div className="menu-backdrop" onClick={()=>setMenu(false)} aria-hidden="true"/>}
     {settings&&<div className="menu-backdrop" onClick={()=>setSettings(false)} aria-hidden="true"/>}
     <div className="dock" ref={shell}><button className="wave" onClick={()=>setAudio(!audio)} aria-label={audio?'Mute audio':'Enable audio'} aria-pressed={audio}><svg width="38" height="25" viewBox="0 0 40 25" aria-hidden="true"><path ref={wavePath} d={audio?"M0 12h8l4-5 5 14 5-18 5 13 5-4h8":"M0 12h40"} fill="none" stroke="currentColor" strokeWidth="1.5"/></svg></button>

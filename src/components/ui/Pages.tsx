@@ -195,7 +195,19 @@ export function Contact() {
       setDraft(true);window.location.href='mailto:'+profile.email+'?subject='+subject+'&body='+body;
     }}>
       <div className="contact-pair"><label>01　Your name<input required name="name" autoComplete="name" placeholder="Jane Doe" /></label><label>02　Email address<input required type="email" name="email" autoComplete="email" placeholder="jane@company.com" /></label></div>
-      {[['type','03　Project type',['Website','Web app','E-commerce','3D / WebGL','Other']],['budget','04　Budget',['Under ₹50k','₹50k–₹2L','₹2L+','Let’s discuss']]].map(([name,title,options])=><fieldset key={String(name)}><legend>{title}</legend>{(options as string[]).map((v,i)=><label className="choice" key={v}><input type="radio" name={String(name)} value={v}/><span><small>0x0{i} </small>{v}</span></label>)}</fieldset>)}
+      {[['type','03　Project type',['Website','Web app','E-commerce','3D / WebGL','Other']],['budget','04　Budget',['Under ₹50k','₹50k–₹2L','₹2L+','Let’s discuss']]].map(([name,title,options])=>(
+        <fieldset key={String(name)}>
+          <legend>{title}</legend>
+          <div className="choice-group">
+            {(options as string[]).map((v,i)=>(
+              <label className="choice" key={v}>
+                <input type="radio" name={String(name)} value={v} defaultChecked={i===0} />
+                <span><small>0x0{i} </small>{v}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+      ))}
       <label>05　Your message<textarea required name="message" rows={4} placeholder="What are you working on?" /></label>
       <button className="send">Open email draft ↗</button><p className="draft-note" role="status">{draft?'Continue in your email app. You can also write directly to '+profile.email+'.':'Opens your email app with the details filled in.'}</p>
     </form></article>;
